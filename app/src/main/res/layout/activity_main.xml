@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fillViewport="true"
+    android:onClick="openActivity"
+    tools:context=".MainActivity"
+    tools:ignore="DuplicateClickableBoundsCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:onClick="openActivity"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imgCartLogo"
+            android:layout_width="206dp"
+            android:layout_height="155dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Cart Logo"
+            android:src="@drawable/img_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtNumItems"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/rounded_edit_text_background"
+            android:hint="Number of Items"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgCartLogo" />
+
+        <EditText
+            android:id="@+id/edtKnapsackCapacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/rounded_edit_text_background"
+            android:hint="Knapsack Capacity"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtNumItems" />
+
+        <EditText
+            android:id="@+id/edtItemWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_edit_text_background"
+            android:hint="Item Weight"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@id/edtItemValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtKnapsackCapacity" />
+
+        <EditText
+            android:id="@+id/edtItemValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_edit_text_background"
+            android:hint="Item Value"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@id/btnAddItem"
+            app:layout_constraintStart_toEndOf="@id/edtItemWeight"
+            app:layout_constraintTop_toBottomOf="@id/edtKnapsackCapacity" />
+
+        <Button
+            android:id="@+id/btnAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Add Item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edtItemValue"
+            app:layout_constraintTop_toBottomOf="@id/edtKnapsackCapacity" />
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Calculate Knapsack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.202"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAddItem" />
+
+        <Button
+            android:id="@+id/btnNewButton"
+            android:layout_width="102dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:onClick="openActivity"
+            android:text="Switch"
+            app:layout_constraintStart_toEndOf="@id/btnCalculate"
+            app:layout_constraintTop_toTopOf="@id/btnCalculate" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCalculate"
+            app:layout_constraintVertical_bias="0.315" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
