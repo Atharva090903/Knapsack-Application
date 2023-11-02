@@ -42,12 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        btnCalculate.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                calculateKnapsack();
-//            }
-//        });
+
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,18 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void openActivity(View v){
-        Toast.makeText(MainActivity.this, "Hello", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "Switching to 0/1 Knapsack", Toast.LENGTH_SHORT).show();
         Intent intent= new Intent(this,MainActivity2.class);
         startActivity(intent);
     }
-//    private void addItem() {
-//        int weight = Integer.parseInt(edtItemWeight.getText().toString());
-//        int value = Integer.parseInt(edtItemValue.getText().toString());
-//        items.add(new Item(weight, value));
-//        // Clear input fields
-//        edtItemWeight.getText().clear();
-//        edtItemValue.getText().clear();
-//    }
+
         private void addItem() {
             try {
                 int weight = Integer.parseInt(edtItemWeight.getText().toString());
